@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-primary btn-lg">Add New Recipe</button>
+  </div>
+</div>
+<hr style="margin: 1rem" />
+<div class="row">
+  <div class="col-xs-12">
+    <a
+      href="#"
+      class="list-group-item clearfix"
+      *ngFor="let recipe of recipeList"
+    >
+      <div class="pull-left" style="width: 20rem">
+        <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+        <p
+          class="list-group-item-text"
+          style="
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* number of lines to show */
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+          "
+        >
+          {{ recipe.desc }}
+        </p>
+        <hr style="margin: 1rem" />
+        <button type="button" class="btn btn-light">Continue reading</button>
+      </div>
+      <span class="pull-right">
+        <img
+          class="card-img-top img-responsive"
+          style="max-height: 14rem"
+          alt="{{ recipe.name }}"
+          src="{{ recipe.imageURL }}"
+        /> </span
+    ></a>
+  </div>
+</div>
+<br />

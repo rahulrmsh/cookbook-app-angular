@@ -5,6 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './header.component.html',
 })
 export class HeaderComponent implements OnInit {
+  collapsed: boolean = true;
+  onHeaderCollapse() {
+    this.collapsed = !this.collapsed;
+  }
   constructor() {}
 
   ngOnInit(): void {}
